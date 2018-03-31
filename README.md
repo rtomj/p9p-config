@@ -6,7 +6,7 @@ Plan9Port Configuration Files
 - a - Acme startup script
 - Add autostartx to .profile
 
-## Depends On:- a - Allows multiple instances of Acme
+## Depends On:
 - https://github.com/rtrn/plan9fonts
 - http://terminus-font.sourceforge.net
 
