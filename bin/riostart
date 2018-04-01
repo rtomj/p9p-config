@@ -1,6 +1,6 @@
 #!/opt/plan9/bin/rc
 
-stats -W 121x101@0,0 -lbcim &
+stats -W 121x101@0,0 -F $PLAN9/font/terminus/ter-u14n.font -lbcim &
 9term -W 650x400@100,180 &
 
 
