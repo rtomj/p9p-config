@@ -1,0 +1,12 @@
+#!/opt/plan9/bin/rc
+
+stats -W 121x101@0,0 -lbcim &
+9term -W 650x400@100,180 &
+
+
+
+
+
+
+
+

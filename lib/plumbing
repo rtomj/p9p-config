@@ -1,0 +1,23 @@
+# to update: cat $HOME/lib/plumbing | 9p write plumb/rules
+
+include fileaddr
+
+type is text
+data matches 'File "([.a-zA-Z¡-<U+FFFF>0-9_/\-]*[a-zA-Z¡-<U+FFFF>0-9_/\-])", line ([0-9]+), characters ([0-9]+)-([0-9]+):'
+arg isfile      $1
+data set        $file
+attr add        addr=$2-#0+#$3,$2-#0+#$4
+plumb to edit
+plumb client $editor
+
+# image files go to feh
+type is text
+data matches '[a-zA-ZÃ€-Ã¿0-9_\-./]+'
+data matches '([a-zA-ZÃ€-Ã¿0-9_\-./]+)\.(jpe?g|JPE?G|gif|GIF|tiff?|TIFF?|ppm|bit|png|PNG)'
+arg isfile	$0
+plumb to image
+plumb start sxiv $file
+#plumb start 9 page $file
+
+include basic
+

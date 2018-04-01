@@ -1,0 +1,7 @@
+#!/opt/plan9/bin/rc 
+
+fn acme { builtin acme -f $PLAN9/font/plan9fonts/terminus/ter-u14n.font  } 
+
+NAMESPACE = `{mktemp -d} 
+plumber >/dev/null >[2=1] 
+acme

@@ -1,0 +1,11 @@
+#!/bin/sh
+        
+if [ "`/bin/ls -l /proc/self/fd/0 2>/dev/null | awk '{print $NF}'`" = '/dev/tty1' ]
+	then
+		# echo
+        # echo Console login.
+        NAMESPACE=/tmp/ns.`hostname`
+        export NAMESPACE
+        rm -rf $NAMESPACE; mkdir $NAMESPACE
+		startx
+fi

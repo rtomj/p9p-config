@@ -1,0 +1,14 @@
+# Profile for rc shell
+
+# Default font for Plan 9 programs.
+font=$PLAN9/font/terminus/ter-u14v.font
+home=$HOME
+user=$USER
+tz=$TZ
+shell=$PLAN9/bin/rc
+PAGER=nobs
+pager=$PAGER	
+
+#fn vi { sam $* }
+#fn acme { builtin acme -f $font $* }
+
