@@ -1,4 +1,4 @@
-#!/opt/plan9/bin/rc 
+#!/usr/bin/env rc 
 
 fn acme { builtin acme -f $PLAN9/font/plan9fonts/terminus/ter-u14n.font  } 
 
